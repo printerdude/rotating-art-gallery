@@ -11,7 +11,7 @@ function App() {
 		const options = { method: 'GET', headers: { Accept: 'application/json' } };
 
 		fetch(
-			'https://api.modulenft.xyz/api/v1/opensea/user/tokens?user=deor',
+			`https://api.modulenft.xyz/api/v1/opensea/user/tokens?user=${searchBar.wallet}`,
 			options
 		)
 			.then((response) => response.json())
