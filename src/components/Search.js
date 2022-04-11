@@ -2,18 +2,18 @@ import React from 'react';
 import { useState } from 'react';
 
 function Search({ searchBar, setSearchBar, handleSearch }) {
-    const handleChange = (event) => {
-        setSearchBar({...searchBar, wallet: event.target.value})
-    }
+	const handleChange = (event) => {
+		setSearchBar({ ...searchBar, wallet: event.target.value });
+	};
 	return (
 		<div>
 			<form id='formContainer' onSubmit={handleSearch}>
-				<label htmlFor='menuEl'> Search Bar</label>
+				<label htmlFor='searchBarEl'>Search Bar</label>
 				<input
 					type='text'
-					id='menuEl'
+					id='searchBarEl'
 					onChange={handleChange}
-					value={searchBar.menuEl}
+					// value={searchBar.searchBarEl}
 				/>
 				<button type='submit'>Submit</button>
 			</form>
