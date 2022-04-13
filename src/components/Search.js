@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 function Search({ searchBar, setSearchBar, handleSearch }) {
+    
 	const handleChange = (event) => {
 		setSearchBar({ ...searchBar, wallet: event.target.value });
 	};
@@ -13,6 +14,7 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 					type='text'
 					id='searchBarEl'
 					onChange={handleChange}
+					placeholder='Enter Wallet Address'
 					// value={searchBar.searchBarEl}
 				/>
 				<button type='submit'>Submit</button>

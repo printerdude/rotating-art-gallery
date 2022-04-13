@@ -15,7 +15,7 @@ function App() {
 			options
 		)
 			.then((response) => response.json())
-			.then((response) => console.log(response))
+			.then((response) => console.log(response.tokens[0]))
 			.catch((err) => console.error(err));
 	}
 
@@ -39,6 +39,7 @@ function App() {
 						}></Route>
 				</Routes>
 			</main>
+      {/* <img src={response.tokens[0].name} alt='image'></img> */}
 		</div>
 	);
 }
