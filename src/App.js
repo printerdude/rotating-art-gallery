@@ -5,6 +5,10 @@ import Home from './components/Home';
 
 function App() {
 	const [searchBar, setSearchBar] = useState();
+  // attempt to display image to gallery
+  const [image, setImage] = useState();
+  // storing response to nft data
+  const [nftData, setNftData] = useState();
 
 	function handleSearch(event) {
 		event.preventDefault();
@@ -15,7 +19,11 @@ function App() {
 			options
 		)
 			.then((response) => response.json())
-			.then((response) => console.log(response.tokens[0]))
+			// .then((response) => console.log(response))
+			.then((response) => {
+        console.log(response.tokens[0])
+        setImage(response.tokens[0].imageUrl)
+      })
 			.catch((err) => console.error(err));
 	}
 
@@ -39,7 +47,7 @@ function App() {
 						}></Route>
 				</Routes>
 			</main>
-      {/* <img src={response.tokens[0].name} alt='image'></img> */}
+      <img src={image} alt='image'></img>
 		</div>
 	);
 }
