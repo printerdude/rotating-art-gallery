@@ -10,7 +10,7 @@ import Home from './components/Home';
 function App() {
 	const [searchBar, setSearchBar] = useState();
 	// attempt to display image to gallery
-	const [image, setImage] = useState();
+	// const [image, setImage] = useState();
 	// storing response to nft data
 	const [data, setData] = useState();
 	const [galleryItems, setGalleryItems] = useState([]);
@@ -29,8 +29,11 @@ function App() {
 				// console.log(response.tokens[0])
 				console.log(response.tokens);
 				const data = response.tokens;
-				const image = data.filter((e) => e.imageUrl !== null).map((m) => <img src={m.imageUrl} alt='' />);
+				const image = data
+					.filter((e) => e.imageUrl !== null)
+					.map((m) => <img src={m.imageUrl} alt='' />);
 				setGalleryItems(image);
+				console.log(image);
 				// setImage(response.tokens[0].imageUrl)
 			})
 			.catch((err) => console.error(err));
@@ -39,46 +42,7 @@ function App() {
 		0: { items: 1 },
 		1024: { items: 2 },
 	};
-	// class App extends Component {
-	//   	const [searchBar, setSearchBar] = useState();
-	// 	  // attempt to display image to gallery
-	// 	  const [image, setImage] = useState();
-	// 	  // storing response to nft data
-	// 	  const [data, setData] = useState();
 
-	// 	constructor(props) {
-	// 		super(props);
-	// 		this.state = {
-	// 			galleryItems: [],
-	// 		};
-	// 	}
-
-	// 	getData() {
-	// 		axios
-	// 			.get(
-	// 				`https://api.modulenft.xyz/api/v1/opensea/user/tokens?user=${searchBar.wallet}`,
-	// 				{}
-	// 			)
-	// 			.then((res) => {
-	// 				const data = res.data;
-	// 				const img = data.map((m) => <img src={m.download_url} alt='' />);
-	// 				this.setState({
-	// 					galleryItems: img,
-	// 				});
-	// 			})
-	// 			.catch((error) => {
-	// 				console.log(error);
-	// 			});
-	// 	}
-	// 	responsive = {
-	// 		0: { items: 1 },
-	// 		1024: { items: 2 },
-	// 	};
-	// 	componentDidMount() {
-	// 		this.getData();
-	// 	}
-
-	// render() {
 	return (
 		<div className='app-container'>
 			<nav>
@@ -99,25 +63,16 @@ function App() {
 								searchBar={searchBar}
 								setSearchBar={setSearchBar}
 								handleSearch={handleSearch}
+								galleryItems={galleryItems}
+								setGalleryItems={setGalleryItems}
+								responsive={responsive}
+								data={data}
+								setData={setData}
 							/>
 						}></Route>
 				</Routes>
 			</main>
 			{/* <img src={image} alt='image'></img> */}
-			<div>
-				{galleryItems.length > 0 && (
-					<AliceCarousel
-						items={galleryItems}
-						responsive={responsive}
-						autoPlayInterval={2000}
-						autoPlayDirection='rtl'
-						autoPlay={true}
-						fadeOutAnimation={true}
-						mouseTrackingEnabled={true}
-						disableAutoPlayOnAction={true}
-					/>
-				)}
-			</div>
 		</div>
 	);
 }

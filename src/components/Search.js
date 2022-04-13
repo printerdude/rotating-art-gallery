@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 
 function Search({ searchBar, setSearchBar, handleSearch }) {
-    
 	const handleChange = (event) => {
 		setSearchBar({ ...searchBar, wallet: event.target.value });
 	};
