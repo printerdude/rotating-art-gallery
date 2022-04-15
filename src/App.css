@@ -1,0 +1,29 @@
+.app-container {
+    display: grid;
+    /* 1 row for nav and 1 row for main in app.js */
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr;
+}
+
+nav {
+grid-row: 1;
+grid-columns: 1fr;
+}
+
+#homeLink {
+
+}
+
+
+#homeLink-img {
+    max-height: 3rem;
+}
+
+#homeLink-title {
+    max-height: 3rem;
+}
+
+main {
+grid-row: 2;
+grid-columns: 1fr;
+}

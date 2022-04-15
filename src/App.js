@@ -11,7 +11,7 @@ function App() {
 	const [searchBar, setSearchBar] = useState();
 	// attempt to display image to gallery
 	// const [image, setImage] = useState();
-	// storing response to nft data
+	// storing api response to data
 	const [data, setData] = useState();
 	const [galleryItems, setGalleryItems] = useState([]);
 
@@ -26,18 +26,17 @@ function App() {
 			.then((response) => response.json())
 			// .then((response) => console.log(response))
 			.then((response) => {
-				// console.log(response.tokens[0])
 				console.log(response.tokens);
 				const data = response.tokens;
 				const image = data
 					.filter((e) => e.imageUrl !== null)
 					.map((m) => <img src={m.imageUrl} alt='' />);
 				setGalleryItems(image);
-				console.log(image);
 				// setImage(response.tokens[0].imageUrl)
 			})
 			.catch((err) => console.error(err));
 	}
+	// responsive used for alice carousel in gallery component
 	const responsive = {
 		0: { items: 1 },
 		1024: { items: 2 },
@@ -48,10 +47,11 @@ function App() {
 			<nav>
 				<Link id='homeLink' to='/'>
 					<img
+						id='homeLink-img'
 						src='https://cdn-icons-png.flaticon.com/512/1946/1946488.png'
 						alt='home icon'
 					/>
-					<h1> Rotating Art Gallery</h1>
+					<h1 id='homeLink-title'> Rotating Art Gallery</h1>
 				</Link>
 			</nav>
 			<main>
