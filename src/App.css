@@ -7,23 +7,29 @@
 
 nav {
 grid-row: 1;
-grid-columns: 1fr;
+/* grid for home img and title */
+
 }
 
 #homeLink {
-
+display: grid;
+grid-template-rows: 1fr;
+grid-template-columns: 1.8fr 0.3fr 1fr 1fr 1fr 1fr;
 }
 
 
 #homeLink-img {
     max-height: 3rem;
+    grid-column: 2;
+    
 }
 
 #homeLink-title {
     max-height: 3rem;
+    grid-column: 3 / span 5
 }
 
 main {
 grid-row: 2;
-grid-columns: 1fr;
 }
+
