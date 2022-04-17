@@ -13,14 +13,14 @@ function Home({
 
 }) {
 	return (
-		<div>
-			Home
+		<div id='home-container'>
 			<Search
 				searchBar={searchBar}
 				setSearchBar={setSearchBar}
 				handleSearch={handleSearch}
 			/>
 			<Gallery
+				
 				galleryItems={galleryItems}
 				setGalleryItems={setGalleryItems}
 				responsive={responsive}

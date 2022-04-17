@@ -4,7 +4,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 function Gallery({ galleryItems, responsive }) {
 	return (
-		<div>
+		<div id='gallery-container'>
 			Gallery
 			<div>
 				{galleryItems.length > 0 && (

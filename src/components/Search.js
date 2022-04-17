@@ -6,7 +6,7 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 		setSearchBar({ ...searchBar, wallet: event.target.value });
 	};
 	return (
-		<div>
+		<div id='search-container'>
 			<form id='formContainer' onSubmit={handleSearch}>
 				<label htmlFor='searchBarEl'>Search Bar</label>
 				<input
