@@ -1,14 +1,11 @@
+body {
+background: #EEF4D4;
+}
+
 .app-container {
     display: grid;
-    /* 1 row for nav and 1 row for main in app.js */
     grid-template-rows: 1fr 1fr 4fr;
     grid-template-columns: 1fr;
-    /* background-image: linear-gradient(to bottom right, red, yellow); */
-    /* background: papayawhip; */
-    background: #EEF4D4;
-    
-    height: 100%;
-    background-size:100% 100%;
 }
 
 nav {
@@ -44,10 +41,6 @@ main {
     grid-template-columns: 1.2fr 1.3fr 1fr 1fr;
 }
 
-/* #search-container {
-    grid-row: 2;
-    grid-column: 2 / span 4;
-} */
 
 #search-container {
     grid-row: 2;
