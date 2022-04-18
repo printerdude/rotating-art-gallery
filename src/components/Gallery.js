@@ -10,12 +10,14 @@ function Gallery({ galleryItems, responsive }) {
 				<AliceCarousel
 					items={galleryItems}
 					responsive={responsive}
-					autoPlayInterval={2000}
-					autoPlayDirection='rtl'
+					autoPlayInterval={3300}
+					autoPlayDirection='ltr'
 					autoPlay={true}
 					fadeOutAnimation={true}
 					mouseTrackingEnabled={true}
 					disableAutoPlayOnAction={true}
+					infinite={true}
+					autoHeight={true}
 				/>
 			)}
 		</div>
