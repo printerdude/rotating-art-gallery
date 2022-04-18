@@ -17,7 +17,7 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 					placeholder='Enter Wallet Address'
 				/>
 				{/* <button type='submit'>Create</button> */}
-				<div className='example-container'>
+				<div className='motion-button-container'>
 					<motion.button
 						whileHover={{ scale: 1.2 }}
 						whileTap={{ scale: 0.8 }}
@@ -25,11 +25,6 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 					/>
 					</div> 
 			</form>
-			{/* <div className='example-container'>
-				<motion.div 
-					whileHover={{ scale: 1.2 }} 
-					whileTap={{ scale: 0.8 }} />
-			</div> */}
 		</div>
 	);
 }
