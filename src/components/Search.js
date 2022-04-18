@@ -17,7 +17,7 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 					placeholder='Enter Wallet Address'
 					// value={searchBar.searchBarEl}
 				/>
-				<button type='submit'>Submit</button>
+				<button type='submit'>Create</button>
 			</form>
 		</div>
 	);

@@ -4,7 +4,8 @@
     grid-template-rows: 1fr 1fr 4fr;
     grid-template-columns: 1fr;
     /* background-image: linear-gradient(to bottom right, red, yellow); */
-    background: papayawhip;
+    /* background: papayawhip; */
+    background: #EEF4D4;
     
     height: 100%;
     background-size:100% 100%;
@@ -18,7 +19,7 @@ grid-row: 2;
 display: grid;
 grid-template-rows: 1fr;
 grid-template-columns: 2.8fr 0.3fr 1fr 1fr 1fr 1fr;
-color: palevioletred;
+color: #D64550;
 }
 
 
@@ -61,8 +62,11 @@ main {
 }
 
 button {
-    /* padding: 0.25em 1em; */
     width: 64px;
     height: 46px;
     padding: 0;
+    border: 2px solid #D64550;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    color: #D64550;
 }
