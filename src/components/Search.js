@@ -16,7 +16,6 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 					onChange={handleChange}
 					placeholder='Enter Wallet Address'
 				/>
-				{/* <button type='submit'>Create</button> */}
 				<div className='motion-button-container'>
 					<motion.button
 						whileHover={{ scale: 1.2 }}

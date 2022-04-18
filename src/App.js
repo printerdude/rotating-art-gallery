@@ -1,6 +1,4 @@
 import './App.css';
-// import React, { Component } from 'react';
-// import axios from 'axios';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { useState } from 'react';
@@ -11,9 +9,6 @@ import Home from './components/Home';
 
 function App() {
 	const [searchBar, setSearchBar] = useState();
-	// attempt to display image to gallery
-	// const [image, setImage] = useState();
-	// storing api response to data
 	const [data, setData] = useState();
 	const [galleryItems, setGalleryItems] = useState([]);
 
@@ -26,7 +21,6 @@ function App() {
 			options
 		)
 			.then((response) => response.json())
-			// .then((response) => console.log(response))
 			.then((response) => {
 				console.log(response.tokens);
 				const data = response.tokens;
@@ -34,10 +28,10 @@ function App() {
 					.filter((e) => e.imageUrl !== null)
 					.map((m) => <img src={m.imageUrl} alt='' />);
 				setGalleryItems(image);
-				// setImage(response.tokens[0].imageUrl)
 			})
 			.catch((err) => console.error(err));
 	}
+
 	// responsive used for alice carousel in gallery component
 	const responsive = {
 		0: { items: 1 },
@@ -76,7 +70,6 @@ function App() {
 						}></Route>
 				</Routes>
 			</main>
-			{/* <img src={image} alt='image'></img> */}
 		</div>
 	);
 }
