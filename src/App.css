@@ -72,3 +72,9 @@ button {
     background-color: whitesmoke;
     color: #D64550;
 }
+.example-container div {
+    background: white;
+    border-radius: 30px;
+    width: 150px;
+    height: 150px;
+}
