@@ -5,8 +5,6 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 function Gallery({ galleryItems, responsive }) {
 	return (
 		<div id='gallery-container'>
-			Gallery
-			<div>
 				{galleryItems.length > 0 && (
 					<AliceCarousel
 						items={galleryItems}
@@ -19,7 +17,6 @@ function Gallery({ galleryItems, responsive }) {
 						disableAutoPlayOnAction={true}
 					/>
 				)}
-			</div>
 		</div>
 	);
 }

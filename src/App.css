@@ -3,7 +3,10 @@
     /* 1 row for nav and 1 row for main in app.js */
     grid-template-rows: 1fr 1fr 4fr;
     grid-template-columns: 1fr;
-    
+    background-image: linear-gradient(to bottom right, red, yellow);
+    width: 100%;
+    height: 100%;
+    background-size:100% 100%;
 }
 
 nav {
@@ -34,7 +37,7 @@ main {
 
 #home-container{
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
     grid-template-columns: 1.3fr 1fr 1fr;
 }
 
@@ -44,6 +47,6 @@ main {
 }
 
 #gallery-container {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2;
 }
