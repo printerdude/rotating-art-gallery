@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import styledComponents from 'styled-components';
 
 function Search({ searchBar, setSearchBar, handleSearch }) {
 	const handleChange = (event) => {

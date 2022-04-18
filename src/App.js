@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 
+
 function App() {
 	const [searchBar, setSearchBar] = useState();
 	// attempt to display image to gallery
@@ -41,6 +42,8 @@ function App() {
 		0: { items: 1 },
 		1024: { items: 2 },
 	};
+
+
 
 	return (
 		<div className='app-container'>
