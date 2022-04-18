@@ -8,7 +8,7 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 	};
 	return (
 		<div id='search-container'>
-			<form id='formContainer' onSubmit={handleSearch}>
+			<form id='form-container' onSubmit={handleSearch}>
 				<label htmlFor='searchBarEl'>Search Bar</label>
 				<input
 					type='text'
@@ -23,9 +23,8 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 						whileTap={{ scale: 0.8 }}
 						type='submit'
 					/>
-				</div>
+					</div> 
 			</form>
-
 			{/* <div className='example-container'>
 				<motion.div 
 					whileHover={{ scale: 1.2 }} 
