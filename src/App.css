@@ -41,7 +41,7 @@ main {
 #home-container{
     display: grid;
     grid-template-rows: 1fr 2fr 1fr 1fr;
-    grid-template-columns: 1fr 1.23fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1.3fr 1fr 1fr;
 }
 
 #search-container {
@@ -58,7 +58,7 @@ main {
 
 #searchBarEl {
     height: 40px;
-    width: 501px;
+    width: 410px;
     font-size: 16px;
     padding-left: 2px;
 }

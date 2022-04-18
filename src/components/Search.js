@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import styledComponents from 'styled-components';
+import { motion } from 'framer-motion';
 
 function Search({ searchBar, setSearchBar, handleSearch }) {
 	const handleChange = (event) => {
@@ -15,7 +15,6 @@ function Search({ searchBar, setSearchBar, handleSearch }) {
 					id='searchBarEl'
 					onChange={handleChange}
 					placeholder='Enter Wallet Address'
-					// value={searchBar.searchBarEl}
 				/>
 				<button type='submit'>Create</button>
 			</form>

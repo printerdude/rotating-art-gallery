@@ -8,6 +8,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 
 
+
 function App() {
 	const [searchBar, setSearchBar] = useState();
 	// attempt to display image to gallery
